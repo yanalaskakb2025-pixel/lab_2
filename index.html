@@ -4,10 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Laska Yana</title>
+    
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        h1 {
+            color: #1a2a3a;
+            letter-spacing: 1px;
+        }
+    </style>
 </head>
 <body>
 
-    <header>
+    <header id="header-main">
         <h1>Laska Yana</h1>
         <p>
             <strong>Date of birth:</strong> 12.10.2007 | 
@@ -17,17 +26,15 @@
         </p>
     </header>
 
-    <hr>
-
-    <main>
-        <section>
+    <main class="main-layout">
+        <section class="card" data-section="profile">
             <h2>Personal Profile</h2>
-            <p>
+            <p style="font-style: italic; color: #4a5568;">
                 Motivated Cybersecurity student at Lviv Polytechnic National University with hands-on experience from SoftServe Academy and AWS Cloud Security Foundations certification. Proficient in Python and C# automation, network analysis, and basic ethical hacking. Combines 13 years of professional athletic experience (Master of sports in karate) with strong problem-solving skills to protect systems and data.
             </p>
         </section>
 
-        <section>
+        <section class="card" data-section="education">
             <h2>Education</h2>
             <ul>
                 <li>
@@ -37,7 +44,7 @@
             </ul>
         </section>
 
-        <section>
+        <section class="card" data-section="skills">
             <h2>Technical Skills</h2>
             <ul>
                 <li><strong>Programming and scripting:</strong> Python, C# (OOP fundamentals).</li>
@@ -46,7 +53,7 @@
             </ul>
         </section>
 
-        <section>
+        <section class="card" data-section="languages">
             <h2>Languages</h2>
             <ul>
                 <li><strong>Ukrainian:</strong> Native</li>
@@ -54,10 +61,10 @@
             </ul>
         </section>
 
-        <section>
+        <section class="card" data-section="projects">
             <h2>Projects</h2>
             
-            <article>
+            <article class="project-item">
                 <h3>Cybersecurity Audit Simulation</h3>
                 <p><strong>Technologies:</strong> Network analysis, security assessment</p>
                 <ul>
@@ -67,7 +74,7 @@
                 </ul>
             </article>
 
-            <article>
+            <article class="project-item">
                 <h3>Academic Programming Projects</h3>
                 <p><strong>Technologies:</strong> Python, C#</p>
                 <ul>
@@ -78,26 +85,24 @@
             </article>
         </section>
 
-        <section>
+        <section class="card" data-section="certificates">
             <h2>Certifications & Achievements</h2>
             <ul>
                 <li>
                     Cybersecurity Certificate: 
-                    <a href="Certificate.pdf" target="_blank">View Certificate (PDF)</a>
+                    <a href="Certificate.pdf" target="_blank" class="cert-link">View Certificate (PDF)</a>
                 </li>
                 <li>
                     Master of Sports: 
-                    <a href="МС.png" target="_blank">View Master of Sports (PNG)</a>
+                    <a href="МС.png" target="_blank" class="cert-link">View Master of Sports (PNG)</a>
                 </li>
             </ul>
         </section>
     </main>
-
-    <hr>
 
     <footer>
         <p>&copy; 2026 Laska Yana. All rights reserved.</p>
     </footer>
 
 </body>
-</html>  
+</html>

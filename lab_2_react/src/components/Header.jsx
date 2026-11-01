@@ -1,21 +1,23 @@
-function Header({ isDark }) {
+import React from 'react';
+
+const Header = ({ theme, toggleTheme }) => {
   return (
-    <header className={`flex flex-col items-center p-8 rounded-2xl border-b-4 shadow-lg text-center mb-8 transition-colors duration-500 ${
-      isDark 
-        ? 'bg-slate-900/90 backdrop-blur-md border-purple-500 text-slate-100' 
-        : 'bg-white/80 backdrop-blur-md border-purple-300 text-slate-800'
-    }`}>
-      <h1 className={`text-4xl font-bold tracking-wide mb-2 ${isDark ? 'text-purple-300' : 'text-purple-900'}`}>
-        Laska Yana
-      </h1>
-      <p className={`text-sm md:text-base font-medium ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
-        <span className="inline-block mr-2">🗓️ 12.10.2007</span> | 
-        <span className="inline-block mx-2">🇺🇦 Ukrainian</span> | 
-        <span className="inline-block mx-2">♀️ Female</span> | 
-        <span className="inline-block ml-2">📞 (+380)972660596</span>
-      </p>
+    <header className="flex justify-between items-center pb-6 border-b border-slate-700/40">
+      <div>
+        {/* Замість просто «Портфоліо» вказуємо ваше ім'я */}
+        <h1 className="text-3xl font-bold">Портфоліо: Ласка Яна</h1>
+        <p className="text-sm opacity-70">Фахівець з кібербезпеки та веб-розробки</p>
+      </div>
+
+      {/* Кнопка перемикання теми з Пункту 4 */}
+      <button
+        onClick={toggleTheme}
+        className="px-4 py-2 rounded-xl text-sm font-medium border border-purple-500/40 bg-purple-600/20 hover:bg-purple-600/30 transition-all flex items-center gap-2"
+      >
+        {theme === 'light' ? '🌙 Нічна тема' : '☀️ Денна тема'}
+      </button>
     </header>
   );
-}
+};
 
 export default Header;

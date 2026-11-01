@@ -1,0 +1,108 @@
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #ffe5ec 0%, #f0e6ff 50%, #e8f4ff 100%);
+    background-attachment: fixed;
+    color: #4a4e69;
+    padding: 20px;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(5px);
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 16px;
+    border-bottom: 4px solid #c8b6ff;
+    box-shadow: 0 4px 15px rgba(200, 182, 255, 0.2);
+    text-align: center;
+}
+
+#header-main p {
+    font-size: 0.95rem;
+    color: #6c757d;
+    margin-top: 8px;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 22px;
+    border: 1px solid #e7c6ff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(187, 208, 255, 0.25);
+    flex: 1 1 300px;
+}
+
+.card h2 {
+    color: #9b5de5;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #ffc6ff;
+    padding-bottom: 6px;
+}
+
+.card ul {
+    padding-left: 20px;
+}
+
+section[data-section="profile"] {
+    flex: 1 1 100%;
+}
+
+section[data-section="projects"] {
+    flex: 1 1 100%;
+}
+
+.cert-link {
+    color: #00b4d8;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.cert-link:hover {
+    color: #ff85a1;
+    text-decoration: underline;
+}
+
+.project-item:first-child {
+    margin-bottom: 15px;
+}
+
+.main-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    color: #7b2cbf;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+@media (max-width: 600px) {
+    .main-layout {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    header {
+        padding: 15px;
+    }
+}
